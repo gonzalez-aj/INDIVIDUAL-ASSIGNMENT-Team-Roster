@@ -78,3 +78,6 @@ To learn more about Next.js, take a look at the following resources:
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+- [ERD](https://dbdiagram.io/d/63cc2c4c296d97641d7b3493)
+- [Mockaroo example of faux data](https://www.mockaroo.com/f443fee0)
