@@ -35,7 +35,8 @@ function MemberCard({ memberObj, onUpdate }) {
     </Card>
   );
 }
-
+// .propTypes = about to define the proptypes, only append to components
+// PropTypes. is when youre defining an actual proptype
 MemberCard.propTypes = {
   memberObj: PropTypes.shape({
     image: PropTypes.string,
