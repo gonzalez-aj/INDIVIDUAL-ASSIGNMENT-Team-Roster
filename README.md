@@ -79,5 +79,7 @@ To learn more about Next.js, take a look at the following resources:
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
+# Angie's ReadMe: 
 - [ERD](https://dbdiagram.io/d/63cc2c4c296d97641d7b3493)
 - [Mockaroo example of faux data](https://www.mockaroo.com/f443fee0)
+- [![Netlify Status](https://api.netlify.com/api/v1/badges/ace94429-7c0c-4e2a-a8ae-4bb8a357c732/deploy-status)](https://app.netlify.com/sites/team-roster-gonzalez/deploys)
