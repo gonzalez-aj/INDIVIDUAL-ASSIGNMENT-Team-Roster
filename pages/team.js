@@ -6,7 +6,7 @@ import { getMembers } from '../api/membersData';
 import { useAuth } from '../utils/context/authContext';
 import MemberCard from '../components/MemberCard';
 
-function TeamMembers() {
+export default function TeamMembers() {
   // set a state for members
   const [members, setMembers] = useState([]);
 
@@ -39,5 +39,3 @@ function TeamMembers() {
     </div>
   );
 }
-
-export default TeamMembers;

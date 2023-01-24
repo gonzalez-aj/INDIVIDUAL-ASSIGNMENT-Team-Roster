@@ -43,7 +43,6 @@ const getSingleMember = (firebaseKey) => new Promise((resolve, reject) => { // f
   })
     .then((response) => response.json())
     .then((data) => resolve(data)) // will resolve a single object
-    // .then((data) => resolve(Object.values(data))) Any time we are getting a single item back from Firebase, it will return the object we need so we just need to resolve the data and not manipulate it.
     .catch(reject);
 });
 
