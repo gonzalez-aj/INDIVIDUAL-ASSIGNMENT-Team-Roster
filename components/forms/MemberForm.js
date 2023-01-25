@@ -20,11 +20,11 @@ function MemberForm({ obj }) {
   // handle form first, formInput is for everything on the form
   const [formInput, setFormInput] = useState(initialState); // initial state is an object so you dont need curly brackets around it
   // const [members, setMembers] = useState([]);
-  // use state is storing the state of the data; use state is only for state management of data
+  // use state is storing the state of the data; only for state mgmt of data
   // tracking and managing the state of data
   const router = useRouter();
   const { user } = useAuth();
-  // useAuth custom hook for stretch goals of getting onbj by uid
+  // useAuth custom hook for getting obj by uid
 
   // useffect happens after 2nd render the component mounts; ie form
   useEffect(() => {
@@ -55,7 +55,7 @@ function MemberForm({ obj }) {
       updateMember(formInput).then(() => router.push('/team'));
     } else {
       const payload = { ...formInput, uid: user.uid };
-      createMember(payload).then(({ name }) => {
+      createMember(payload).then(({ name }) => { // key on obj is name
         const patchPayload = { firebaseKey: name };
         updateMember(patchPayload).then(() => {
           router.push('/team');

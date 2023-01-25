@@ -11,7 +11,7 @@ export default function TeamMembers() {
   // set a state for members
   const [members, setMembers] = useState([]);
 
-  // useAuth Hook gets uid
+  // useAuth Hook gets members by uid
   const { user } = useAuth();
 
   // this is where we get the book object prop
