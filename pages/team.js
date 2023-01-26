@@ -6,11 +6,11 @@ import { Button } from 'react-bootstrap';
 import { getMembers } from '../api/membersData';
 import { useAuth } from '../utils/context/authContext';
 import MemberCard from '../components/MemberCard';
+// import SearchBar from '../components/searchBar';
 
 export default function TeamMembers() {
   // set a state for members
   const [members, setMembers] = useState([]);
-
   // useAuth Hook gets members by uid
   const { user } = useAuth();
 
@@ -20,7 +20,7 @@ export default function TeamMembers() {
     getMembers(user.uid).then(setMembers);
   };
 
-  // TODO: make the call to the API to get all the books on component render
+  // TODO: make the call to the API to get all the members on component render
   useEffect(() => {
     getAllTheMembers();
   }, []);
@@ -30,6 +30,8 @@ export default function TeamMembers() {
       <Head>
         <title>Marvel Avengers</title>
       </Head>
+      <br />
+      {/* <SearchBar /> */}
       <div className="text-center my-4">
         <Link href="/member/new" passHref>
           <Button>Add A Member</Button>
