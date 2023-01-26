@@ -25,10 +25,10 @@ function MemberCard({ memberObj, onUpdate }) {
         <Card.Body>
           <Card.Title>{memberObj.role}</Card.Title>
           <p className="card-text bold">{memberObj.name}</p>
-          {/* DYNAMIC LINK TO VIEW THE member DETAILS
-        <Link href={`/member/${memberObj.firebaseKey}`} passHref>
-          <Button variant="primary" className="m-2">VIEW</Button>
-        </Link> */}
+          {/* DYNAMIC LINK TO VIEW THE member DETAILS */}
+          <Link href={`/member/${memberObj.firebaseKey}`} passHref>
+            <Button variant="primary" className="m-2">view ☊ </Button>
+          </Link>
           {/* DYNAMIC LINK TO EDIT THE BOOK DETAILS this route knows wut compnt to render */}
           <Link href={`/member/edit/${memberObj.firebaseKey}`} passHref>
             <Button variant="info">edit ✐</Button>
