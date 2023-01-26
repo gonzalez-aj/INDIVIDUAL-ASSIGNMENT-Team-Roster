@@ -14,6 +14,7 @@ const initialState = {
   name: '',
   image: '',
   role: '',
+  favorite: false,
 };
 
 function MemberForm({ obj }) {
@@ -109,6 +110,22 @@ function MemberForm({ obj }) {
           />
         </FloatingLabel>
 
+        {/* FAVORITE: A WAY TO HANDLE UPDATES FOR TOGGLES, RADIOS, ETC  */}
+        <Form.Check
+          className="text-white mb-3"
+          type="switch"
+          id="favorite"
+          name="favorite"
+          label="Favorite?"
+          checked={formInput.favorite}
+          onChange={(e) => {
+            setFormInput((prevState) => ({
+              ...prevState,
+              favorite: e.target.checked,
+            }));
+          }}
+        />
+
         {/* team SELECT stretch goal
 
       <FloatingLabel controlId="floatingSelect" label="Team">
@@ -147,6 +164,7 @@ MemberForm.propTypes = {
     name: PropTypes.string,
     image: PropTypes.string,
     role: PropTypes.string,
+    favorite: PropTypes.bool,
     firebaseKey: PropTypes.string,
   }),
 };
