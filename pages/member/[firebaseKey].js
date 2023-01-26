@@ -24,12 +24,15 @@ export default function ViewMember() {
         <img src={memberDetails.image} alt={memberDetails.name} style={{ width: '300px' }} />
       </div>
       <div className="text-white ms-5 details">
-        <h5>
-          {memberDetails.name} is
-        </h5>
         <h4>
-          {memberDetails.role}
+          {memberDetails.name} is
         </h4>
+        <h3>
+          {memberDetails.role}
+        </h3>
+        <h5>
+          {memberDetails.favorite ? 'Fave ⭐︎' : ''}
+        </h5>
       </div>
     </div>
   );
