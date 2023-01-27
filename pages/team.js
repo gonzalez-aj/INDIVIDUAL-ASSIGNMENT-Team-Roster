@@ -34,7 +34,7 @@ export default function TeamMembers() {
       <SearchBar />
       <div className="text-center my-4">
         <Link href="/member/new" passHref>
-          <Button>Add A Member</Button>
+          <Button>add a member</Button>
         </Link>
         <div className="d-flex flex-wrap">
           {/* map over members here using MemberCard component */}
