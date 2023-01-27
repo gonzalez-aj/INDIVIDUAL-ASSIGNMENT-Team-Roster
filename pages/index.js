@@ -1,5 +1,6 @@
+import React from 'react';
 import Head from 'next/head';
-import { Button } from 'react-bootstrap';
+import { Button, Image } from 'react-bootstrap';
 import { signOut } from '../utils/auth';
 import { useAuth } from '../utils/context/authContext';
 
@@ -20,7 +21,14 @@ function Home() {
           margin: '0 auto',
         }}
       >
-        <h1>Hello {user.displayName}! </h1>
+        <h1>Welcome {user.displayName}! </h1>
+        <div className="align-content-around">
+          <Image src={user.photoURL} referrerPolicy="no-referrer" alt="your face" width="150px" height="150px" />
+        </div>
+        <br />
+        <h4>email: {user.email}</h4>
+        <h6>The last time you entered the Marvel-Verse: {user.metadata.lastSignInTime}</h6>
+        <br />
         <p>Click the button below to logout!</p>
         <Button variant="danger" type="button" size="lg" className="copy-btn" onClick={signOut}>
           Sign Out
