@@ -18,6 +18,7 @@ function Search() {
   useEffect(() => {
     getAllTheMembers();
   }, []);
+
   return (
     <div className="d-flex flex-wrap">
       {/* map over members here using MemberCard component */}
