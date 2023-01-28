@@ -17,17 +17,19 @@ function Home() {
         style={{
           height: '90vh',
           padding: '30px',
-          maxWidth: '400px',
+          maxWidth: '600px',
           margin: '0 auto',
         }}
       >
-        <h1>Welcome {user.displayName}! </h1>
+        <h1>Welcome to the Marvel Verse,</h1>
+        <h1> {user.displayName}! </h1>
         <div className="align-content-around">
           <Image src={user.photoURL} referrerPolicy="no-referrer" alt="your face" width="150px" height="150px" />
         </div>
         <br />
         <h4>email: {user.email}</h4>
-        <h6>The last time you entered the Marvel-Verse: {user.metadata.lastSignInTime}</h6>
+        <h6>The last time you entered the Marvel-Verse:</h6>
+        <h6>{user.metadata.lastSignInTime}</h6>
         <br />
         <p>Click the button below to logout!</p>
         <Button variant="danger" type="button" size="lg" className="copy-btn" onClick={signOut}>

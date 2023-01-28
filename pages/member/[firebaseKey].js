@@ -7,7 +7,7 @@ import { viewMemberDetails } from '../../api/mergedData';
 export default function ViewMember() {
   const [memberDetails, setMemberDetails] = useState({});
   const router = useRouter();
-  console.warn('router object', router);
+  // console.warn('router object', router);
 
   // TODO: grab firebaseKey from url query is a key within the router obj - {firebaseKey} is taco
   const { firebaseKey } = router.query;
@@ -28,10 +28,10 @@ export default function ViewMember() {
           {memberDetails.name} is
         </h4>
         <h3>
-          {memberDetails.role}
+          {memberDetails.role} ⚡︎
         </h3>
         <h5>
-          {memberDetails.favorite ? 'Fave ⭐︎' : ''}
+          {memberDetails.favorite ? 'Fave ⭐︎⭐︎⭐︎⭐︎⭐︎' : ''}
         </h5>
       </div>
     </div>

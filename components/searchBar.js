@@ -8,7 +8,7 @@ export default function SearchBar() {
 
   const handleChange = (e) => {
     setSearchInput(e.target.value.toLowerCase());
-    console.warn('e.target.value', e.target.value.toLowerCase());
+    // console.warn('e.target.value', e.target.value.toLowerCase());
   };
   const handleSubmit = (e) => {
     e.preventDefault();
