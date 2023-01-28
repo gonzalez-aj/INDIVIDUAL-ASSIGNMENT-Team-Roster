@@ -1,9 +1,10 @@
-/* eslint-disable react-hooks/exhaustive-deps */
+import { useRouter } from 'next/router';
 import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 
-function SearchBar() {
+export default function SearchBar() {
   const [searchInput, setSearchInput] = useState('');
+  const router = useRouter();
 
   const handleChange = (e) => {
     setSearchInput(e.target.value.toLowerCase());
@@ -11,6 +12,7 @@ function SearchBar() {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (searchInput !== '') router.push(`/search/${searchInput}`);
   };
 
   return (
@@ -33,5 +35,3 @@ function SearchBar() {
     </>
   );
 }
-
-export default SearchBar;
