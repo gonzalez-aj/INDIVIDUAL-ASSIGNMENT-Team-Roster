@@ -1,46 +1,24 @@
-/* eslint-disable react-hooks/exhaustive-deps */
+import { useRouter } from 'next/router';
 import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import PropTypes from 'prop-types';
 
-const initialState = {
-  name: '',
-  image: '',
-  role: '',
-  favorite: false,
-};
-
-function SearchBar({ data }) {
+export default function SearchBar() {
   const [searchInput, setSearchInput] = useState('');
-  const [filteredData, setFilteredData] = useState([]);
-  console.warn('filteredData', filteredData);
+  const router = useRouter();
 
   const handleChange = (e) => {
-    const searchWord = setSearchInput(e.target.value);
+    setSearchInput(e.target.value.toLowerCase());
     console.warn('e.target.value', e.target.value.toLowerCase());
-    const arrayWrap = Object.keys(data);
-    const newSearch = arrayWrap.filter((value) => (
-      value.name?.toLowerCase().includes(searchWord.toLowerCase())));
-    if (searchWord === '') {
-      setFilteredData([]);
-    } else {
-      setFilteredData(newSearch);
-    }
-    setFilteredData(newSearch);
   };
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (searchInput !== '') {
-      console.warn('handleSubmit searchInput', searchInput);
-      console.warn('handleSubmit setSearchInput()', setSearchInput());
-    }
+    if (searchInput !== '') router.push(`/search/${searchInput}`);
   };
 
   return (
     <>
       <Form onSubmit={handleSubmit}>
-        <div className="searchInputs">
+        <div className="searchBox">
           <input
             className="form-control"
             id="search"
@@ -57,19 +35,3 @@ function SearchBar({ data }) {
     </>
   );
 }
-
-SearchBar.propTypes = {
-  data: PropTypes.shape({
-    name: PropTypes.string,
-    image: PropTypes.string,
-    role: PropTypes.string,
-    favorite: PropTypes.bool,
-    firebaseKey: PropTypes.string,
-  }),
-};
-
-SearchBar.defaultProps = {
-  data: initialState,
-};
-
-export default SearchBar;
