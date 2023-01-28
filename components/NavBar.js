@@ -2,9 +2,9 @@
 import React from 'react';
 import Link from 'next/link';
 import {
-  Navbar, Container, Nav, Button,
+  Navbar, Container, Nav,
 } from 'react-bootstrap';
-import { signOut } from '../utils/auth';
+import SearchBar from './SearchBar';
 
 export default function NavBar() {
   return (
@@ -23,7 +23,7 @@ export default function NavBar() {
             <Link passHref href="/member/new">
               <Navbar.Brand>NEW</Navbar.Brand>
             </Link>
-            <Button variant="danger" onClick={signOut}>Sign Out</Button>
+            <SearchBar />
           </Nav>
         </Navbar.Collapse>
       </Container>
