@@ -6,7 +6,7 @@ import { Button } from 'react-bootstrap';
 import { getMembers } from '../api/membersData';
 import { useAuth } from '../utils/context/authContext';
 import MemberCard from '../components/MemberCard';
-import SearchBar from '../components/searchBar';
+import SearchBar from '../components/SearchBar';
 
 export default function TeamMembers() {
   // set a state for members
@@ -28,11 +28,13 @@ export default function TeamMembers() {
   return (
     <>
       <Head>
-        <title>Marvel Avengers</title>
+        <title>Marvel Avengers⚡︎</title>
       </Head>
-      <br />
-      <SearchBar />
       <div className="text-center my-4">
+        <h1>Team Marvel ⚡︎</h1>
+        <br />
+        <SearchBar />
+        <br />
         <Link href="/member/new" passHref>
           <Button>add a member</Button>
         </Link>
