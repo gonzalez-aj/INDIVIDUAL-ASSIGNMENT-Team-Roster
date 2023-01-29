@@ -30,6 +30,9 @@ function Search() {
 
   return (
     <>
+      <div>
+        <h1>Searched for: {searchInput}</h1>
+      </div>
       <div className="d-flex flex-wrap">
         {/* map over members here using MemberCard component */}
         {members.map((obj) => (
