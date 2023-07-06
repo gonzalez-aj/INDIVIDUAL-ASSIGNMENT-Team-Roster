@@ -1,6 +1,7 @@
 # Welcome to Team Marvel ![Netlify Status](https://api.netlify.com/api/v1/badges/ace94429-7c0c-4e2a-a8ae-4bb8a357c732/deploy-status)
 This team roster includes goodies and baddies from the Marvel Universe. 
-### [View the App here](https://app.netlify.com/sites/team-roster-gonzalez/deploys)
+### [View the App here](https://team-roster-gonzalez.netlify.app/)
+- https://app.netlify.com/sites/team-roster-gonzalez/deploys
 
 ## Get Started
 - get started by looking at [startup readme with instructions on how to clone](./startupReadMe.md)
